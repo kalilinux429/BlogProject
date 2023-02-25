@@ -1,0 +1,7 @@
+payroll query
+
+
+SELECT distinct(WFH.requestId),sts.status_text ,Month(CHK.fromDate),WFH.*, count(CHK.fromDate) as 'NumOdDays' FROM workFromHome WFH
+JOIN checkEntryIfExist CHK ON WFH.requestId = CHK.requestId
+JOIN status_master sts ON WFH.status = sts.status_key
+where month(CHK.fromDate) = '5' and YEAR(CHK.fromDate) = '2021' group by WFH.requestId order by WFH.fromDate;

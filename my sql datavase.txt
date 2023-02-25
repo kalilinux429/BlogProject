@@ -1,0 +1,58 @@
+workbench my squl database commands1
+1. SHOWDATABASES
+2. SELECT. This command is used to select data from a database.
+INSERT. This command is used to insert data into a database.
+UPDATE. This command is used to update data in a database.
+DELETE. This command is used to delete data from a database.
+
+3. USE service_instance_db;
+
+2. CREATE DATABASE <database_name>
+Creates a new database on the server. You can also do this through the MySQL Workbench system by going to File -> Create Schema. Workbench is an administrative GUI for MySQL.
+
+3. DROP DATABASE <database_name>
+Deletes a database from the server. You should be very careful when you do this because you can lose data if you haven’t been backing up your system.
+
+4. USE <database_name>
+Switches to a specific database on the server. 
+5. SHOW TABLES
+Shows all tables in the current database. You can use this to quickly review what tables have been entered into the database.
+
+6. SELECT * FROM <table_name>
+Retrieves all rows from a table. The query results are given in a spreadsheet-like format that will show you the rows and columns that include all the information.
+
+7. WHERE <column> = <value>
+Returns rows where a column matches a given value. Often, you’ll use a primary key or even a foreign key, a unique identifier that is used to pull data more effectively.
+
+8. ORDER BY <column> ASC/DESC
+Sorts the results of a SELECT statement in a given order, either ascending or descending.
+
+9. LIMIT <number_of_rows>
+Returns only the first number of rows from the results of a SELECT statement. You can also start at a certain query result, so you could start at row 10
+
+10. CREATE TABLE <table_name> (<column1> <data_type>, <column2> <data_type>)
+Creates a new table with the given columns and data types. Learning the data types that correspond with SQL commands can take some time. Just know that there are a lot of different data types available, including INT, CHAR, VARCHAR, and BLOB.
+
+11. ALTER TABLE <table_name> ADD <column> <data_type>
+Adds a new column to an existing table. You can alter an existing table to add columns, drop columns, or just change columns. But be mindful of what this might do to your data.
+
+12. ALTER TABLE <table_name> DROP <column>
+Drops a column from an existing table. This cannot be rolled back if you didn’t previously save your data, so be cautious about using the ALTER TABLE function on a database table.
+
+13. ALTER TABLE <table_name> RENAME <old_column> TO <new_column>
+Renames a column in an existing table. This is one of the easiest ways to change a table that already exists.
+
+14. TRUNCATE TABLE <table_name>
+Deletes all the data from a table but retains the table structure. Users will often truncate tables when they’re trying to remove the result set so they can continue building their database from scratch.
+
+15. CREATE INDEX <index_name> ON <table_name>(<column1>)
+Creates an index on a given column in a table. If you didn’t create an index when you first built the database table, you might need to do this after the fact. Or you might want to select a different index entirely.
+
+16. DROP INDEX <index_name> ON <table_name>
+Drops an index from a table. You can always drop an index but it’s not necessarily a good idea unless you know what effect that will have on the database. Don’t drop a primary key from your MySQL database unless you have a very good reason for doing so.
+
+17. UPDATE <table_name> SET <column_name> = <value>
+Updates rows and columns in a given table. Sets the value of a column. Often used with WHERE, which would be used to select which rows are affected.
+
+18. DELETE FROM <table_name>
+Deletes records from a table. Used with the WHERE selection. Deletes entire rows (to delete a column entry, you would set the value to null).

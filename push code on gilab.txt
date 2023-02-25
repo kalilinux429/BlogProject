@@ -1,0 +1,7 @@
+push code on github=>with same branhs
+=>npm start (run project)
+=>npm run build (rename build foler with dist)
+=>git status
+=>git add .
+=>git commit -m "initia  commit"
+=>git push origin <branch name> --force
